@@ -1,0 +1,320 @@
+/* =======================
+   GLOBAL SETUP
+======================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f4f7f6;
+    color: #2c3e50;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =======================
+   LOGIN PAGE
+======================= */
+.auth-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 60px;
+    border-radius: 15px;
+    width: 500px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-top: 6px solid #2ecc71;
+}
+
+/* =======================
+   LOGO (ABOVE TITLE)
+======================= */
+.login-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+
+    border-radius: 10px;
+    padding: 6px;
+    background: white;
+    border: 0px solid #ddd;
+
+    box-shadow: 0 0px 0px rgba(0,0,0,0.08);
+}
+
+/* TITLE */
+.login-title {
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #145a32;
+    letter-spacing: 1px;
+}
+
+/* =======================
+   FORM
+======================= */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #dcdfe3;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #27ae60;
+}
+
+/* =======================
+   DASHBOARD LAYOUT
+======================= */
+.dashboard-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 300px;
+    background: #145a32;
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-header h2 {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 25px;
+
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: rgba(255,255,255,0.05);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar li:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.sidebar li.active {
+    background: #1abc9c;
+}
+
+.btn-logout {
+    padding: 12px;
+    background: #e74c3c;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* =======================
+   MAIN CONTENT
+======================= */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* =======================
+   STATS
+======================= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+.stat-card p {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.blue { background: #3498db; }
+.green { background: #2ecc71; }
+.dark-green { background: #145a32; }
+.orange { background: #f39c12; }
+
+/* =======================
+   FORM & TABLE
+======================= */
+.form-container,
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 1px;
+    border-left: 4px solid #2ecc71;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* =======================
+   BUTTON
+======================= */
+.btn-borrow-submit {
+    width: 100%;
+    padding: 12px;
+    background: #16a085;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-borrow-submit:hover {
+    background: #138d75;
+}
+
+/* =======================
+   TABLE
+======================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #eafaf1;
+    padding: 10px;
+    font-size: 13px;
+    color: #145a32;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+/* =======================
+   RETURN BUTTON
+======================= */
+button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* =======================
+   ERROR TEXT
+======================= */
+.error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 8px;
+}
+ /* compact date + button alignment */
+.expiry-wrap {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 3px;
+}
+
+/* MAKE CALENDAR SMALLER */
+.expiry-input {
+width: 115px;       /* ↓ smaller calendar */
+font-size: 11px;
+padding: 2px;
+height: 26px;
+}
+
+/* SMALL GREEN ENTER BUTTON */
+.enter-btn {
+background: #28a745;   /* green */
+color: white;
+border: none;
+padding: 2px 6px;      /* smaller button */
+font-size: 10px;
+border-radius: 3px;
+cursor: pointer;
+height: 26px;
+line-height: 1;
+}
+
+.enter-btn:hover {
+background: #1e7e34;
+}
+
+/* table alignment clean */
+#available-table td {
+vertical-align: middle;
+text-align: center;
+padding: 6px;
+}
+
+/* =======================
+   VIEW MODE
+======================= */
+body.view-only-mode .admin-only {
+    display: none;
+}
